@@ -11,7 +11,7 @@ const cardSchema = new mongoose.Schema({
         type:Number,
         required:true,
     },
-    cardExpiryMonth:{
+    cardExpiryYear:{
         type:Number,
         required:true,
     },

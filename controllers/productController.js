@@ -5,7 +5,7 @@ exports.addProducts = async(req,res)=>{
     try{
         const checkProductId = await Product.findOne({productId:req.body.productId});
         if(checkProductId){
-            res.status(409).json({message: "product already added"});
+            return res.status(409).json({message: "product already added"});
         }
         const newProduct =  await Product.create({
             productId:req.body.productId,
